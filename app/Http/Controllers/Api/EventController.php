@@ -12,7 +12,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        // return all events
+        return \App\Models\Event::all();
     }
 
     /**
@@ -26,9 +27,9 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(\App\Models\Event $event)
     {
-        //
+        return $event;
     }
 
     /**
